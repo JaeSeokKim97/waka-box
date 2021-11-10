@@ -1,8 +1,5 @@
 name: Update gist with WakaTime stats
 on:
-  push:
-    branches:
-      - master
   schedule:
     - cron: "0 0 * * *"
 jobs:
@@ -14,6 +11,5 @@ jobs:
         uses: matchai/waka-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_ID: d011080e3cf48827fc3b8576d376e949
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          TIMEZONE: Asia/Seoul
